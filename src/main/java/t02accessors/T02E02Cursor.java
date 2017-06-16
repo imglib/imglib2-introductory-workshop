@@ -1,4 +1,4 @@
-package t03accessors;
+package t02accessors;
 import ij.ImageJ;
 import net.imglib2.Cursor;
 import net.imglib2.img.Img;
@@ -11,7 +11,7 @@ import net.imglib2.type.numeric.integer.UnsignedByteType;
  *
  * @author Tobias Pietzsch
  */
-public class T03E02Cursor
+public class T02E02Cursor
 {
     public static void main( final String[] args )
     {

@@ -1,4 +1,4 @@
-package t03accessors;
+package t02accessors;
 
 import java.io.IOException;
 
@@ -16,7 +16,7 @@ import net.imglib2.type.numeric.ARGBType;
  *
  * @author Tobias Pietzsch
  */
-public class T03E05Copy
+public class T02E05Copy
 {
 	public static void main( final String[] args ) throws IOException
 	{

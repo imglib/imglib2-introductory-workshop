@@ -1,4 +1,4 @@
-package t03accessors;
+package t02accessors;
 
 import ij.ImageJ;
 import net.imglib2.Cursor;
@@ -13,7 +13,7 @@ import net.imglib2.type.numeric.real.FloatType;
  *
  * @author Tobias Pietzsch
  */
-public class T03E04IterationOrder
+public class T02E04IterationOrder
 {
 	public static void main( final String[] args )
 	{

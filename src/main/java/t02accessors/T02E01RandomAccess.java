@@ -1,4 +1,4 @@
-package t03accessors;
+package t02accessors;
 import net.imglib2.RandomAccess;
 import net.imglib2.img.Img;
 import net.imglib2.img.array.ArrayImgs;
@@ -10,7 +10,7 @@ import net.imglib2.type.numeric.integer.UnsignedByteType;
  *
  * @author Tobias Pietzsch
  */
-public class T03E01RandomAccess
+public class T02E01RandomAccess
 {
     public static void main( final String[] args )
     {

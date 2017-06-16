@@ -1,4 +1,4 @@
-package t03accessors;
+package t02accessors;
 import ij.ImageJ;
 import net.imglib2.Cursor;
 import net.imglib2.img.Img;
@@ -12,7 +12,7 @@ import net.imglib2.type.numeric.integer.IntType;
  *
  * @author Tobias Pietzsch
  */
-public class T03E03LocalizingCursor
+public class T02E03LocalizingCursor
 {
     public static void main( final String[] args )
     {
