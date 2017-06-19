@@ -18,7 +18,8 @@ public class SandboxIJ2
 		// show the ImageJ window
 		ij.ui().showUI();
 
-		final Img< ? > img = ij.scifio().datasetIO().open( "http://imagej.net/images/clown.png" );
+		final Img< ? > img = ij.scifio().datasetIO().open( SandboxIJ2.class.getResource( "/clown.png" ).getFile() );
+//		final Img< ? > img = ij.scifio().datasetIO().open( "https://imagej.net/images/clown.png" );
 
 		/*
 		 * We do not know the ImgLib2 pixel type yet.

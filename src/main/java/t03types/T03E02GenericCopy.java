@@ -37,7 +37,8 @@ public class T03E02GenericCopy
 
 	public static void main( final String[] args ) throws IOException
 	{
-		final ImagePlus imp = IJ.openImage( "http://imagej.net/images/clown.png" );
+		final ImagePlus imp = IJ.openImage( T03E02GenericCopy.class.getResource( "/clown.png" ).getFile() );
+//		final ImagePlus imp = IJ.openImage( "https://imagej.net/images/clown.png" );
 		final Img< ARGBType > img = ImageJFunctions.wrap( imp );
 		ImageJFunctions.show( img, "img" );
 
@@ -45,7 +46,8 @@ public class T03E02GenericCopy
 		copy( img, copy );
 		ImageJFunctions.show( copy, "copy" );
 
-		final ImagePlus imp2 = IJ.openImage( "http://imagej.net/images/blobs.gif" );
+		final ImagePlus imp2 = IJ.openImage( T03E02GenericCopy.class.getResource( "/blobs.tif" ).getFile() );
+//		final ImagePlus imp2 = IJ.openImage( "https://imagej.net/images/blobs.gif" );
 		final Img< UnsignedByteType > img2 = ImageJFunctions.wrap( imp2 );
 		ImageJFunctions.show( img2, "img2" );
 

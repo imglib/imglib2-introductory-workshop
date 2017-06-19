@@ -20,7 +20,9 @@ public class T04E07Smoothing
 {
 	public static void main( final String[] args ) throws IOException, IncompatibleTypeException
 	{
-		final ImagePlus imp = IJ.openImage( "http://imagej.net/images/clown.png" );
+		final ImagePlus imp = IJ.openImage( T04E07Smoothing.class.getResource( "/clown.png" ).getFile() );
+//		final ImagePlus imp = IJ.openImage( "https://imagej.net/images/clown.png" );
+
 		final Img< ARGBType > input = ImageJFunctions.wrap( imp );
 		ImageJFunctions.show( input );
 
