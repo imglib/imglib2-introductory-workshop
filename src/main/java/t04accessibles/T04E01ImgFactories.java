@@ -23,7 +23,7 @@ public class T04E01ImgFactories
 //		factory = new DiskCachedCellImgFactory<>();
 
 		/*
-		 * Create a 3D stack.
+		 * Create a 3D stack with these dimensions:
 		 */
 		final long[] dim = new long[] { 640, 480, 100 };
 
@@ -32,6 +32,12 @@ public class T04E01ImgFactories
 		 * constructor and in the create() call, unfortunately.
 		 */
 		Img< UnsignedByteType > img = factory.create( dim, new UnsignedByteType() );
+
+		/*
+		 * For simple ArrayImg with known type you can just use the ArrayImgs
+		 * convenience class.
+		 */
+//		img = ArrayImgs.unsignedBytes( 640, 480, 100 );
 
 		/*
 		 * Fill image with (nD) checkerboard pattern
