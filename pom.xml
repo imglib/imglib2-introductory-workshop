@@ -113,6 +113,11 @@ Jean-Yves Tinevez and Michael Zinsmaier.</license.copyrightOwners>
 			<groupId>net.imglib2</groupId>
 			<artifactId>imglib2-realtransform</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>net.imglib2</groupId>
+			<artifactId>imglib2-roi</artifactId>
+			<version>0.4.7</version>
+		</dependency>
 		<!--
 		<dependency>
 			<groupId>net.imglib2</groupId>
