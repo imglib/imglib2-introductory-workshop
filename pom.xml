@@ -118,6 +118,10 @@ Jean-Yves Tinevez and Michael Zinsmaier.</license.copyrightOwners>
 			<artifactId>imglib2-roi</artifactId>
 			<version>0.4.7</version>
 		</dependency>
+		<dependency>
+			<groupId>sc.fiji</groupId>
+			<artifactId>bigdataviewer-vistools</artifactId>
+		</dependency>
 		<!--
 		<dependency>
 			<groupId>net.imglib2</groupId>
