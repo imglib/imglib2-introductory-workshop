@@ -2,15 +2,16 @@ package t01sandbox;
 
 import java.io.IOException;
 
-import ij.IJ;
-import ij.ImageJ;
-import ij.ImagePlus;
 import net.imglib2.img.Img;
 import net.imglib2.img.array.ArrayImgs;
 import net.imglib2.img.display.imagej.ImageJFunctions;
 import net.imglib2.type.numeric.ARGBType;
 import net.imglib2.type.numeric.integer.IntType;
 import net.imglib2.util.Util;
+
+import ij.IJ;
+import ij.ImageJ;
+import ij.ImagePlus;
 
 /**
  * Opening input images and displaying results using ImageJ1 wrappers.

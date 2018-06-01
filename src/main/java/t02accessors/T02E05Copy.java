@@ -2,14 +2,15 @@ package t02accessors;
 
 import java.io.IOException;
 
-import ij.IJ;
-import ij.ImagePlus;
 import net.imglib2.Cursor;
 import net.imglib2.RandomAccess;
 import net.imglib2.img.Img;
 import net.imglib2.img.cell.CellImgFactory;
 import net.imglib2.img.display.imagej.ImageJFunctions;
 import net.imglib2.type.numeric.ARGBType;
+
+import ij.IJ;
+import ij.ImagePlus;
 
 /**
  * Opening input images and displaying results using ImageJ1 wrappers.
@@ -25,7 +26,7 @@ public class T02E05Copy
 		final Img< ARGBType > img = ImageJFunctions.wrap( imp );
 		ImageJFunctions.show( img, "img" );
 
-		final Img< ARGBType > copy = new CellImgFactory<ARGBType>().create( img, new ARGBType() );
+		final Img< ARGBType > copy = new CellImgFactory<>( new ARGBType() ).create( img );
 
 		final Cursor< ARGBType > out = copy.localizingCursor();
 		final RandomAccess< ARGBType > in = img.randomAccess();

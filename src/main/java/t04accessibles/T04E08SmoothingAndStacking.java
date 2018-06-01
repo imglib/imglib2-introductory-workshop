@@ -3,14 +3,15 @@ package t04accessibles;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import ij.IJ;
-import ij.ImagePlus;
 import net.imglib2.algorithm.gauss3.Gauss3;
 import net.imglib2.exception.IncompatibleTypeException;
 import net.imglib2.img.Img;
 import net.imglib2.img.display.imagej.ImageJFunctions;
 import net.imglib2.type.numeric.ARGBType;
 import net.imglib2.view.Views;
+
+import ij.IJ;
+import ij.ImagePlus;
 
 /**
  * Opening input images and displaying results using ImageJ1 wrappers.
@@ -31,7 +32,7 @@ public class T04E08SmoothingAndStacking
 		final ArrayList< Img< ARGBType > > smoothedVersions = new ArrayList<>();
 		for ( int sigma = 1; sigma <= 20; ++sigma )
 		{
-			final Img< ARGBType > output = input.factory().create( input, new ARGBType() );
+			final Img< ARGBType > output = input.factory().create( input );
 			Gauss3.gauss( sigma, Views.extendBorder( input ), output );
 //			ImageJFunctions.show( output );
 			smoothedVersions.add( output );

@@ -17,10 +17,10 @@ public class T04E01ImgFactories
 	public static void main( final String[] args )
 	{
 		final ImgFactory< UnsignedByteType > factory;
-		factory = new ArrayImgFactory<>();
-//		factory = new PlanarImgFactory<>();
-//		factory = new CellImgFactory<>();
-//		factory = new DiskCachedCellImgFactory<>();
+		factory = new ArrayImgFactory<>( new UnsignedByteType() );
+//		factory = new PlanarImgFactory<>( new UnsignedByteType() );
+//		factory = new CellImgFactory<>( new UnsignedByteType() );
+//		factory = new DiskCachedCellImgFactory<>( new UnsignedByteType() );
 
 		/*
 		 * Create a 3D stack with these dimensions:
@@ -31,7 +31,7 @@ public class T04E01ImgFactories
 		 * You have to provide the (same) pixel type both in the factory
 		 * constructor and in the create() call, unfortunately.
 		 */
-		Img< UnsignedByteType > img = factory.create( dim, new UnsignedByteType() );
+		Img< UnsignedByteType > img = factory.create( dim );
 
 		/*
 		 * For simple ArrayImg with known type you can just use the ArrayImgs
@@ -61,22 +61,21 @@ public class T04E01ImgFactories
 		/*
 		 * ImgFactories create images of arbitrary number of dimensions.
 		 */
-		img = factory.create( new long[] { 640, 480, 2, 2 }, new UnsignedByteType() );
-		img = factory.create( new long[] { 640, 480, 2, 2, 2 }, new UnsignedByteType() );
-		img = factory.create( new long[] { 640, 480, 2, 2, 2, 2 }, new UnsignedByteType() );
+		img = factory.create( 640, 480, 2, 2 );
+		img = factory.create( 640, 480, 2, 2, 2 );
+		img = factory.create( 640, 480, 2, 2, 2, 2 );
 
 		/*
-		 * Depending on the number of pixels choose which ImgFactory to use.
+		 * Depending on the number of pixels, choose which ImgFactory to use.
 		 *
 		 * ArrayImg is fastest, but the number of pixels must be < 2^31.
 		 *
 		 * For PlanarImg the number of pixels in each XY slice must be < 2^31.
 		 *
-		 * For CellImg the pixels must in memory.
-		 * Performance should be very big
+		 * For CellImg the pixels must fit in memory.
 		 *
 		 * For DiskCachedCellImg the pixels must fit on hard-drive.
 		 */
-		img = new DiskCachedCellImgFactory< UnsignedByteType >().create( new long[] { 50000, 50000, 50000, 3 }, new UnsignedByteType() );
+		img = new DiskCachedCellImgFactory<>( new UnsignedByteType() ).create( 50000, 50000, 50000, 3 );
 	}
 }

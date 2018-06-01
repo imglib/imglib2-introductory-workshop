@@ -2,8 +2,6 @@ package t03types;
 
 import java.io.IOException;
 
-import ij.IJ;
-import ij.ImagePlus;
 import net.imglib2.Cursor;
 import net.imglib2.RandomAccess;
 import net.imglib2.img.Img;
@@ -13,6 +11,9 @@ import net.imglib2.img.display.imagej.ImageJFunctions;
 import net.imglib2.type.Type;
 import net.imglib2.type.numeric.ARGBType;
 import net.imglib2.type.numeric.integer.UnsignedByteType;
+
+import ij.IJ;
+import ij.ImagePlus;
 
 /**
  * Using Type interface to specify that copy() will work for all pixel types
@@ -42,7 +43,7 @@ public class T03E02GenericCopy
 		final Img< ARGBType > img = ImageJFunctions.wrap( imp );
 		ImageJFunctions.show( img, "img" );
 
-		final Img< ARGBType > copy = new CellImgFactory<ARGBType>().create( img, new ARGBType() );
+		final Img< ARGBType > copy = new CellImgFactory<>( new ARGBType() ).create( img );
 		copy( img, copy );
 		ImageJFunctions.show( copy, "copy" );
 
