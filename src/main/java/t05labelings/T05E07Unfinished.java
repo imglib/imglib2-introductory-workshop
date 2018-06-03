@@ -3,12 +3,6 @@ package t05labelings;
 import java.awt.Color;
 import java.util.Iterator;
 
-import ij.IJ;
-import ij.ImageJ;
-import ij.ImagePlus;
-import ij.gui.Overlay;
-import ij.gui.Roi;
-import ij.gui.TextRoi;
 import net.imglib2.Cursor;
 import net.imglib2.RandomAccessibleInterval;
 import net.imglib2.algorithm.labeling.ConnectedComponents;
@@ -28,6 +22,13 @@ import net.imglib2.type.numeric.integer.UnsignedByteType;
 import net.imglib2.util.Intervals;
 import net.imglib2.view.Views;
 
+import ij.IJ;
+import ij.ImageJ;
+import ij.ImagePlus;
+import ij.gui.Overlay;
+import ij.gui.Roi;
+import ij.gui.TextRoi;
+
 public class T05E07Unfinished
 {
 	public static void main( final String[] args )
@@ -37,7 +38,6 @@ public class T05E07Unfinished
 		// Load the image to segment.
 		final ImagePlus imp = IJ.openImage( T05E04ObjectSegmentation2.class.getResource( "/blobs.tif" ).getFile() );
 		final RandomAccessibleInterval< UnsignedByteType > img = ImageJFunctions.wrap( imp );
-		ImageJFunctions.show( img );
 
 		// Segment it based on simple threshold.
 		final RandomAccessibleInterval< BoolType > mask = Converters.convert(
@@ -71,6 +71,7 @@ public class T05E07Unfinished
 
 		// Mix IJ1 and ImgLib2 stuff.
 		final Overlay overlay = new Overlay();
+		imp.show();
 		imp.setOverlay( overlay );
 		for ( final LabelRegion< String > region : regions )
 		{
@@ -97,7 +98,7 @@ public class T05E07Unfinished
 		labelRegion.move( 80, 0 );
 		final Boundary< BoolType > boundary = new Boundary<>( labelRegion );
 		Regions.sample( boundary, img ).forEach( t -> t.set( 255 ) );
-		ImageJFunctions.show( img );
+		ImageJFunctions.show( img, "l37 and boundary" );
 
 		for ( final LabelRegion< String > region : regions )
 		{
