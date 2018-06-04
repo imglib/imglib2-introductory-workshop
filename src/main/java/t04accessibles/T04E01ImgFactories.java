@@ -26,11 +26,6 @@ public class T04E01ImgFactories
 		 * Create a 3D stack with these dimensions:
 		 */
 		final long[] dim = new long[] { 640, 480, 100 };
-
-		/*
-		 * You have to provide the (same) pixel type both in the factory
-		 * constructor and in the create() call, unfortunately.
-		 */
 		Img< UnsignedByteType > img = factory.create( dim );
 
 		/*

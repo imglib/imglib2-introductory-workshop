@@ -56,8 +56,8 @@ public class T03E01Types
 		I.set( E );
 		I.add( F );
 
-		System.out.println( "C + D = " + H );
 		System.out.println( "A + B = " + G );
+		System.out.println( "C + D = " + H );
 		System.out.println( "E + F = " + I );
 		System.out.println();
 

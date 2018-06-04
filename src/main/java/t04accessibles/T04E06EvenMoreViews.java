@@ -1,13 +1,14 @@
 package t04accessibles;
 
-import ij.IJ;
-import ij.ImagePlus;
 import net.imglib2.RandomAccessibleInterval;
 import net.imglib2.converter.Converters;
 import net.imglib2.img.display.imagej.ImageJFunctions;
 import net.imglib2.type.numeric.ARGBType;
 import net.imglib2.type.numeric.integer.UnsignedByteType;
 import net.imglib2.view.Views;
+
+import ij.IJ;
+import ij.ImagePlus;
 
 public class T04E06EvenMoreViews
 {
@@ -31,6 +32,7 @@ public class T04E06EvenMoreViews
 		ImageJFunctions.show( channels, "channels" );
 
 		/*
+		 * Look at methods in Views class for overview of what's there...
 		 * There's more: Views.pair(), Views.collapse(), ...
 		 */
 	}

@@ -1,13 +1,14 @@
 package t04accessibles;
 
-import ij.IJ;
-import ij.ImagePlus;
 import net.imglib2.RandomAccessible;
 import net.imglib2.RandomAccessibleInterval;
 import net.imglib2.img.display.imagej.ImageJFunctions;
 import net.imglib2.type.numeric.ARGBType;
 import net.imglib2.util.Intervals;
 import net.imglib2.view.Views;
+
+import ij.IJ;
+import ij.ImagePlus;
 
 public class T04E03MoreViews
 {

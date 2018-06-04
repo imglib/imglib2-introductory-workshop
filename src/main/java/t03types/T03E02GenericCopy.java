@@ -23,7 +23,7 @@ import ij.ImagePlus;
  */
 public class T03E02GenericCopy
 {
-	public static < T extends Type< T > >void copy( final Img< T > source, final Img< T > target )
+	public static < T extends Type< T > > void copy( final Img< T > source, final Img< T > target )
 	{
 		final RandomAccess< T > in = source.randomAccess();
 		final Cursor< T > out = target.localizingCursor();

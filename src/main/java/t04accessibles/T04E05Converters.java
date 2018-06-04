@@ -1,13 +1,14 @@
 package t04accessibles;
 
-import ij.IJ;
-import ij.ImagePlus;
 import net.imglib2.RandomAccessibleInterval;
 import net.imglib2.converter.Converter;
 import net.imglib2.converter.Converters;
 import net.imglib2.img.display.imagej.ImageJFunctions;
 import net.imglib2.type.numeric.ARGBType;
 import net.imglib2.type.numeric.integer.UnsignedByteType;
+
+import ij.IJ;
+import ij.ImagePlus;
 
 public class T04E05Converters
 {
@@ -42,6 +43,11 @@ public class T04E05Converters
 		 *
 		 * There are SamplerConverters which are read/write, but this is beyond
 		 * the scope of this workshop.
+		 */
+
+		/*
+		 * Look at methods in Converters class, and classes in package
+		 * net.imglib2.converter, for overview of what's there...
 		 */
 	}
 }
