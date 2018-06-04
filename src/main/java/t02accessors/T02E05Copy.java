@@ -38,6 +38,8 @@ public class T02E05Copy
 			out.get().set( in.get() );
 		}
 
+//		Views.interval( Views.pair( img, copy ), img ).forEach( p -> p.getB().set( p.getA() ) );
+
 		ImageJFunctions.show( copy, "copy" );
 	}
 }

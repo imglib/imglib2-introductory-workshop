@@ -1,8 +1,8 @@
 package t02accessors;
+import net.imagej.ImageJ;
 import net.imglib2.RandomAccess;
 import net.imglib2.img.Img;
 import net.imglib2.img.array.ArrayImgs;
-import net.imglib2.img.display.imagej.ImageJFunctions;
 import net.imglib2.type.numeric.integer.UnsignedByteType;
 
 /**
@@ -14,7 +14,10 @@ public class T02E01RandomAccess
 {
     public static void main( final String[] args )
     {
-        final Img< UnsignedByteType > img = ArrayImgs.unsignedBytes( 400, 320 );
+		final ImageJ ij = new ImageJ();
+		ij.ui().showUI();
+
+		final Img< UnsignedByteType > img = ArrayImgs.unsignedBytes( 400, 320 );
 
         final RandomAccess< UnsignedByteType > r = img.randomAccess();
 		for ( int x = 10; x < 400; x += 10 )
@@ -28,6 +31,6 @@ public class T02E01RandomAccess
 			}
 		}
 
-        ImageJFunctions.show( img );
+		ij.ui().show( img );
     }
 }

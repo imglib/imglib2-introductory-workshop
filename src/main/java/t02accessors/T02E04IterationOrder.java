@@ -1,13 +1,11 @@
 package t02accessors;
 
+import net.imagej.ImageJ;
 import net.imglib2.Cursor;
 import net.imglib2.img.Img;
 import net.imglib2.img.array.ArrayImgFactory;
 import net.imglib2.img.cell.CellImgFactory;
-import net.imglib2.img.display.imagej.ImageJFunctions;
 import net.imglib2.type.numeric.real.FloatType;
-
-import ij.ImageJ;
 
 /**
  * Illustrate the different iteration orders of ArrayImg and CellImg.
@@ -18,7 +16,8 @@ public class T02E04IterationOrder
 {
 	public static void main( final String[] args )
 	{
-		new ImageJ();
+		final ImageJ ij = new ImageJ();
+		ij.ui().showUI();
 
 		final int[] dimensions = new int[] { 400, 320 };
 
@@ -39,7 +38,7 @@ public class T02E04IterationOrder
 			++i;
 		}
 
-		ImageJFunctions.show( arrayImg, "ArrayImg" );
-		ImageJFunctions.show( cellImg, "CellImg" );
+		ij.ui().show( "ArrayImg", arrayImg );
+		ij.ui().show( "CellImg", cellImg );
 	}
 }

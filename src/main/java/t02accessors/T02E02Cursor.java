@@ -1,9 +1,8 @@
 package t02accessors;
-import ij.ImageJ;
+import net.imagej.ImageJ;
 import net.imglib2.Cursor;
 import net.imglib2.img.Img;
 import net.imglib2.img.array.ArrayImgs;
-import net.imglib2.img.display.imagej.ImageJFunctions;
 import net.imglib2.type.numeric.integer.UnsignedByteType;
 
 /**
@@ -15,7 +14,10 @@ public class T02E02Cursor
 {
     public static void main( final String[] args )
     {
-        final Img< UnsignedByteType > img = ArrayImgs.unsignedBytes(  400, 320 );
+		final ImageJ ij = new ImageJ();
+		ij.ui().showUI();
+
+		final Img< UnsignedByteType > img = ArrayImgs.unsignedBytes( 400, 320 );
 
 		final Cursor< UnsignedByteType > cursor = img.cursor();
 		while( cursor.hasNext() )
@@ -39,7 +41,6 @@ public class T02E02Cursor
 
 //		img.forEach( t -> t.inc() );
 
-		new ImageJ();
-		ImageJFunctions.show( img, "Img" );
+		ij.ui().show( img );
     }
 }
