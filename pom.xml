@@ -86,6 +86,8 @@ Jean-Yves Tinevez and Michael Zinsmaier.</license.copyrightOwners>
 
 		<!-- NB: Deploy releases to the SciJava Maven repository. -->
 		<releaseProfiles>deploy-to-scijava</releaseProfiles>
+
+		<imglib2.version>5.8.0</imglib2.version>
 	</properties>
 
 	<repositories>
@@ -136,6 +138,12 @@ Jean-Yves Tinevez and Michael Zinsmaier.</license.copyrightOwners>
 			<artifactId>imglib2-ui</artifactId>
 		</dependency>
 		-->
+
+		<dependency>
+			<groupId>sc.fiji</groupId>
+			<artifactId>simplified-io</artifactId>
+			<version>1.0.1</version>
+		</dependency>
 
 		<!-- ImageJ dependencies -->
 		<dependency>
