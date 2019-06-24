@@ -10,7 +10,7 @@ import net.imglib2.type.numeric.real.DoubleType;
 import net.imglib2.view.Views;
 
 /**
- * Opening input images and displaying results using ImageJ1 wrappers.
+ * Use RealRandomAccess to access a continuous (interpolated) image.
  *
  * @author Tobias Pietzsch
  */

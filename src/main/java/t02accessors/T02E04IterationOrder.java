@@ -6,6 +6,7 @@ import net.imglib2.img.Img;
 import net.imglib2.img.array.ArrayImgFactory;
 import net.imglib2.img.cell.CellImgFactory;
 import net.imglib2.type.numeric.real.FloatType;
+import net.imglib2.view.Views;
 
 /**
  * Illustrate the different iteration orders of ArrayImg and CellImg.

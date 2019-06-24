@@ -7,13 +7,15 @@ import net.imglib2.RandomAccess;
 import net.imglib2.img.Img;
 import net.imglib2.img.cell.CellImgFactory;
 import net.imglib2.img.display.imagej.ImageJFunctions;
+import net.imglib2.loops.LoopBuilder;
 import net.imglib2.type.numeric.ARGBType;
 
 import ij.IJ;
 import ij.ImagePlus;
+import net.imglib2.view.Views;
 
 /**
- * Opening input images and displaying results using ImageJ1 wrappers.
+ * Copy one image to another using Cursor and RandomAccess.
  *
  * @author Tobias Pietzsch
  */
@@ -37,6 +39,8 @@ public class T02E05Copy
 			in.setPosition( out );
 			out.get().set( in.get() );
 		}
+
+//		LoopBuilder.setImages( img, copy ).forEachPixel( ( in, out ) -> out.set( in ) );
 
 //		Views.interval( Views.pair( img, copy ), img ).forEach( p -> p.getB().set( p.getA() ) );
 

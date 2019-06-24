@@ -3,6 +3,7 @@ import net.imagej.ImageJ;
 import net.imglib2.Cursor;
 import net.imglib2.img.Img;
 import net.imglib2.img.array.ArrayImgs;
+import net.imglib2.loops.LoopBuilder;
 import net.imglib2.type.numeric.integer.UnsignedByteType;
 
 /**
@@ -40,6 +41,8 @@ public class T02E02Cursor
 //			iter.next().inc();
 
 //		img.forEach( t -> t.inc() );
+
+//		LoopBuilder.setImages( img ).forEachPixel( UnsignedByteType::inc );
 
 		ij.ui().show( img );
     }
