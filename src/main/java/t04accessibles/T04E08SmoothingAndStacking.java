@@ -14,7 +14,7 @@ import ij.IJ;
 import ij.ImagePlus;
 
 /**
- * Opening input images and displaying results using ImageJ1 wrappers.
+ * Run Gauss smoothing with different sigmas and stack the results into a 3D output image.
  *
  * @author Tobias Pietzsch
  */

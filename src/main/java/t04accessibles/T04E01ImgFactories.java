@@ -2,14 +2,12 @@ package t04accessibles;
 
 import net.imglib2.Cursor;
 import net.imglib2.cache.img.DiskCachedCellImgFactory;
-//import net.imglib2.cache.img.DiskCachedCellImgFactory;
 import net.imglib2.img.Img;
 import net.imglib2.img.ImgFactory;
 import net.imglib2.img.array.ArrayImgFactory;
-//import net.imglib2.img.array.ArrayImgFactory;
-//import net.imglib2.img.cell.CellImgFactory;
+import net.imglib2.img.cell.CellImgFactory;
 import net.imglib2.img.display.imagej.ImageJFunctions;
-//import net.imglib2.img.planar.PlanarImgFactory;
+import net.imglib2.img.planar.PlanarImgFactory;
 import net.imglib2.type.numeric.integer.UnsignedByteType;
 
 public class T04E01ImgFactories

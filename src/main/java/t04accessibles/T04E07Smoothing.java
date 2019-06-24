@@ -13,7 +13,7 @@ import ij.IJ;
 import ij.ImagePlus;
 
 /**
- * Opening input images and displaying results using ImageJ1 wrappers.
+ * Run Gauss smoothing from imglib2-algorithm.
  *
  * @author Tobias Pietzsch
  */
