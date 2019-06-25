@@ -1,5 +1,6 @@
 package t04accessibles;
 
+import helpers.GetResource;
 import ij.IJ;
 import ij.ImagePlus;
 import java.io.IOException;
@@ -35,7 +36,7 @@ public class T04E09PartialDerivative
 		final ImageJ ij = new ImageJ();
 		ij.ui().showUI();
 
-		final Img< UnsignedByteType > img = SimplifiedIO.openImage( T04E09PartialDerivative.class.getResource( "/t1-head.tif" ).getFile(), new UnsignedByteType() );
+		final Img< UnsignedByteType > img = SimplifiedIO.openImage( GetResource.getFile("/t1-head.tif" ), new UnsignedByteType() );
 		final Img< DoubleType > output = new ArrayImgFactory<>( new DoubleType() ).create( img );
 
 		LoopBuilder.setImages(

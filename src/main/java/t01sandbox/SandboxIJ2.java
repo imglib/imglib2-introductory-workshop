@@ -2,6 +2,7 @@ package t01sandbox;
 
 import java.io.IOException;
 
+import helpers.GetResource;
 import net.imagej.Dataset;
 import net.imagej.ImageJ;
 import net.imglib2.img.Img;
@@ -18,7 +19,7 @@ public class SandboxIJ2
 		// show the ImageJ window
 		ij.ui().showUI();
 
-		final Img< ? > img = ij.scifio().datasetIO().open( SandboxIJ2.class.getResource( "/clown.png" ).getFile() );
+		final Img< ? > img = ij.scifio().datasetIO().open( GetResource.getFile("clown.png" ) );
 //		final Img< ? > img = ij.scifio().datasetIO().open( "https://imagej.net/images/clown.png" );
 
 		/*

@@ -2,6 +2,7 @@ package t01sandbox;
 
 import java.io.IOException;
 
+import helpers.GetResource;
 import net.imagej.ImageJ;
 import net.imglib2.img.Img;
 import net.imglib2.type.numeric.integer.UnsignedByteType;
@@ -17,7 +18,7 @@ public class SandboxSimplifiedIO
 		// show the ImageJ window
 		ij.ui().showUI();
 
-		final Img< UnsignedByteType > img = SimplifiedIO.openImage( SandboxIJ1.class.getResource( "/clown.png" ).getFile(), new UnsignedByteType() );
+		final Img< UnsignedByteType > img = SimplifiedIO.openImage( GetResource.getFile("clown.png" ), new UnsignedByteType() );
 //		final Img< UnsignedByteType > img = SimplifiedIO.openImage( "https://imagej.net/images/clown.png", new UnsignedByteType() );
 
 		// show the img
