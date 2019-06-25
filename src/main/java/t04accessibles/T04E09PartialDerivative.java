@@ -22,7 +22,6 @@ import net.imglib2.type.numeric.real.DoubleType;
 import net.imglib2.util.Intervals;
 import net.imglib2.util.Util;
 import net.imglib2.view.Views;
-import sc.fiji.simplifiedio.SimplifiedIO;
 
 /**
  * Another example of using LoopBuilder.
@@ -36,7 +35,8 @@ public class T04E09PartialDerivative
 		final ImageJ ij = new ImageJ();
 		ij.ui().showUI();
 
-		final Img< UnsignedByteType > img = SimplifiedIO.openImage( GetResource.getFile("/t1-head.tif" ), new UnsignedByteType() );
+		final ImagePlus imp = IJ.openImage( GetResource.getFile("/t1-head.tif" ) );
+		final Img< UnsignedByteType > img = ImageJFunctions.wrapByte( imp );
 		final Img< DoubleType > output = new ArrayImgFactory<>( new DoubleType() ).create( img );
 
 		LoopBuilder.setImages(

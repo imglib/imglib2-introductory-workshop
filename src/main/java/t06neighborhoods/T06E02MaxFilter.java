@@ -1,6 +1,8 @@
 package t06neighborhoods;
 
 import helpers.GetResource;
+import ij.IJ;
+import ij.ImagePlus;
 import net.imagej.ImageJ;
 import net.imglib2.RandomAccessible;
 import net.imglib2.algorithm.neighborhood.Neighborhood;
@@ -8,10 +10,10 @@ import net.imglib2.algorithm.neighborhood.CenteredRectangleShape;
 import net.imglib2.algorithm.neighborhood.HyperSphereShape;
 import net.imglib2.algorithm.neighborhood.RectangleShape;
 import net.imglib2.img.Img;
+import net.imglib2.img.display.imagej.ImageJFunctions;
 import net.imglib2.loops.LoopBuilder;
 import net.imglib2.type.numeric.integer.UnsignedByteType;
 import net.imglib2.view.Views;
-import sc.fiji.simplifiedio.SimplifiedIO;
 
 /**
  * Use Neighborhoods to create a MaxFilter
@@ -23,9 +25,8 @@ public class T06E02MaxFilter
 		final ImageJ ij = new ImageJ();
 		ij.ui().showUI();
 
-		final Img< UnsignedByteType > img = SimplifiedIO.openImage(
-				GetResource.getFile("/blobs.tif" ),
-				new UnsignedByteType() );
+		final ImagePlus imp = IJ.openImage( GetResource.getFile("/blobs.tif" ) );
+		final Img< UnsignedByteType > img = ImageJFunctions.wrapByte( imp );
 
 		ij.ui().show( "img", img );
 

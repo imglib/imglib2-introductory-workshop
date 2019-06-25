@@ -124,10 +124,6 @@ Jean-Yves Tinevez and Michael Zinsmaier.</license.copyrightOwners>
 			<groupId>net.imglib2</groupId>
 			<artifactId>imglib2-roi</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.openmicroscopy</groupId>
-			<artifactId>ome-common</artifactId>
-		</dependency>
 		<!--
 		<dependency>
 			<groupId>net.imglib2</groupId>
@@ -142,12 +138,6 @@ Jean-Yves Tinevez and Michael Zinsmaier.</license.copyrightOwners>
 			<artifactId>imglib2-ui</artifactId>
 		</dependency>
 		-->
-
-		<dependency>
-			<groupId>sc.fiji</groupId>
-			<artifactId>simplified-io</artifactId>
-			<version>1.0.1</version>
-		</dependency>
 
 		<!-- ImageJ dependencies -->
 		<dependency>
