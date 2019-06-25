@@ -15,7 +15,7 @@ public class T04E06EvenMoreViews
 {
 	public static void main( final String[] args )
 	{
-		final ImagePlus imp = IJ.openImage( GetResource.getFile("clown.png" ) );
+		final ImagePlus imp = IJ.openImage( GetResource.getFile("/clown.png" ) );
 		final RandomAccessibleInterval< ARGBType > img = ImageJFunctions.wrap( imp );
 		ImageJFunctions.show( img, "img" );
 

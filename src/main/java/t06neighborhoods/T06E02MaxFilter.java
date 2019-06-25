@@ -24,7 +24,7 @@ public class T06E02MaxFilter
 		ij.ui().showUI();
 
 		final Img< UnsignedByteType > img = SimplifiedIO.openImage(
-				GetResource.getFile("blobs.tif" ),
+				GetResource.getFile("/blobs.tif" ),
 				new UnsignedByteType() );
 
 		ij.ui().show( "img", img );

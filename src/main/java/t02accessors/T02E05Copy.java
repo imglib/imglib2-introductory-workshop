@@ -24,7 +24,7 @@ public class T02E05Copy
 {
 	public static void main( final String[] args ) throws IOException
 	{
-		final ImagePlus imp = IJ.openImage(GetResource.getFile("clown.png" ) );
+		final ImagePlus imp = IJ.openImage(GetResource.getFile("/clown.png" ) );
 //		final ImagePlus imp = IJ.openImage( "https://imagej.net/images/clown.png" );
 		final Img< ARGBType > img = ImageJFunctions.wrap( imp );
 		ImageJFunctions.show( img, "img" );

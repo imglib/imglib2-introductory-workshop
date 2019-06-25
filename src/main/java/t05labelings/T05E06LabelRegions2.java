@@ -30,7 +30,7 @@ public class T05E06LabelRegions2
 		new ImageJ();
 
 		// Load the image to segment.
-		final ImagePlus imp = IJ.openImage( GetResource.getFile("blobs.tif" ) );
+		final ImagePlus imp = IJ.openImage( GetResource.getFile("/blobs.tif" ) );
 		final RandomAccessibleInterval< UnsignedByteType > img = ImageJFunctions.wrap( imp );
 		ImageJFunctions.show( img );
 

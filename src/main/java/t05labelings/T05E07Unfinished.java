@@ -37,7 +37,7 @@ public class T05E07Unfinished
 		new ImageJ();
 
 		// Load the image to segment.
-		final ImagePlus imp = IJ.openImage( GetResource.getFile("blobs.tif" ) );
+		final ImagePlus imp = IJ.openImage( GetResource.getFile("/blobs.tif" ) );
 		final RandomAccessibleInterval< UnsignedByteType > img = ImageJFunctions.wrap( imp );
 
 		// Segment it based on simple threshold.

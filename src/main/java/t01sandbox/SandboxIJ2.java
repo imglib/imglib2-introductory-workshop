@@ -19,7 +19,7 @@ public class SandboxIJ2
 		// show the ImageJ window
 		ij.ui().showUI();
 
-		final Img< ? > img = ij.scifio().datasetIO().open( GetResource.getFile("clown.png" ) );
+		final Img< ? > img = ij.scifio().datasetIO().open( GetResource.getFile("/clown.png" ) );
 //		final Img< ? > img = ij.scifio().datasetIO().open( "https://imagej.net/images/clown.png" );
 
 		/*
