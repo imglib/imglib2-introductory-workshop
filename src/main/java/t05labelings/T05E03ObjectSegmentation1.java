@@ -2,6 +2,7 @@ package t05labelings;
 
 import java.util.Iterator;
 
+import helpers.GetResource;
 import ij.IJ;
 import ij.ImageJ;
 import ij.ImagePlus;
@@ -23,7 +24,7 @@ public class T05E03ObjectSegmentation1
 		new ImageJ();
 
 		// Load the image to segment.
-		final ImagePlus imp = IJ.openImage( T05E03ObjectSegmentation1.class.getResource( "/blobs.tif" ).getFile() );
+		final ImagePlus imp = IJ.openImage( GetResource.getFile("blobs.tif" ) );
 		final Img< UnsignedByteType > img = ImageJFunctions.wrap( imp );
 		ImageJFunctions.show( img );
 

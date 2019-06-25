@@ -1,5 +1,6 @@
 package t04accessibles;
 
+import helpers.GetResource;
 import ij.IJ;
 import ij.ImagePlus;
 import net.imglib2.RandomAccessible;
@@ -17,7 +18,7 @@ public class T04E04RealViews
 {
 	public static void main( final String[] args )
 	{
-		final ImagePlus imp = IJ.openImage( T04E04RealViews.class.getResource( "/clown.png" ).getFile() );
+		final ImagePlus imp = IJ.openImage( GetResource.getFile("clown.png" ) );
 		final RandomAccessibleInterval< ARGBType > img = ImageJFunctions.wrap( imp );
 		ImageJFunctions.show( img, "img" );
 

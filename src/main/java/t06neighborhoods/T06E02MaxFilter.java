@@ -1,5 +1,6 @@
 package t06neighborhoods;
 
+import helpers.GetResource;
 import net.imagej.ImageJ;
 import net.imglib2.RandomAccessible;
 import net.imglib2.algorithm.neighborhood.Neighborhood;
@@ -23,7 +24,7 @@ public class T06E02MaxFilter
 		ij.ui().showUI();
 
 		final Img< UnsignedByteType > img = SimplifiedIO.openImage(
-				T06E02MaxFilter.class.getResource( "/blobs.tif" ).getFile(),
+				GetResource.getFile("blobs.tif" ),
 				new UnsignedByteType() );
 
 		ij.ui().show( "img", img );

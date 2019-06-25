@@ -3,6 +3,7 @@ package t05labelings;
 import java.awt.Color;
 import java.util.Iterator;
 
+import helpers.GetResource;
 import net.imglib2.Cursor;
 import net.imglib2.RandomAccessibleInterval;
 import net.imglib2.algorithm.labeling.ConnectedComponents;
@@ -36,7 +37,7 @@ public class T05E07Unfinished
 		new ImageJ();
 
 		// Load the image to segment.
-		final ImagePlus imp = IJ.openImage( T05E04ObjectSegmentation2.class.getResource( "/blobs.tif" ).getFile() );
+		final ImagePlus imp = IJ.openImage( GetResource.getFile("blobs.tif" ) );
 		final RandomAccessibleInterval< UnsignedByteType > img = ImageJFunctions.wrap( imp );
 
 		// Segment it based on simple threshold.

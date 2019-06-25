@@ -2,6 +2,7 @@ package t04accessibles;
 
 import java.io.IOException;
 
+import helpers.GetResource;
 import net.imglib2.algorithm.gauss3.Gauss3;
 import net.imglib2.exception.IncompatibleTypeException;
 import net.imglib2.img.Img;
@@ -21,7 +22,7 @@ public class T04E07Smoothing
 {
 	public static void main( final String[] args ) throws IOException, IncompatibleTypeException
 	{
-		final ImagePlus imp = IJ.openImage( T04E07Smoothing.class.getResource( "/clown.png" ).getFile() );
+		final ImagePlus imp = IJ.openImage( GetResource.getFile("clown.png" ) );
 //		final ImagePlus imp = IJ.openImage( "https://imagej.net/images/clown.png" );
 
 		final Img< ARGBType > input = ImageJFunctions.wrap( imp );

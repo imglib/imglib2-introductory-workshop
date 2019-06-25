@@ -2,6 +2,7 @@ package t01sandbox;
 
 import java.io.IOException;
 
+import helpers.GetResource;
 import net.imglib2.img.Img;
 import net.imglib2.img.array.ArrayImgs;
 import net.imglib2.img.display.imagej.ImageJFunctions;
@@ -26,7 +27,7 @@ public class SandboxIJ1
 		new ImageJ();
 
 		// open an ImageJ1 ImagePlus
-		final ImagePlus imp = IJ.openImage( SandboxIJ1.class.getResource( "/clown.png" ).getFile() );
+		final ImagePlus imp = IJ.openImage( GetResource.getFile( "/clown.png" ) );
 //		final ImagePlus imp = IJ.openImage( "https://imagej.net/images/clown.png" );
 
 		// wrap it as an ImgLib2 img
