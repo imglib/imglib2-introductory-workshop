@@ -68,7 +68,8 @@
 		<url>https://github.com/imglib/imglib2-introductory-workshop/issues</url>
 	</issueManagement>
 	<ciManagement>
-		<system>None</system>
+		<system>GitHub Actions</system>
+		<url>https://github.com/imglib/imglib2-introductory-workshop/actions</url>
 	</ciManagement>
 
 	<properties>
@@ -85,7 +86,7 @@ Mark Longair, Brian Northan, Nick Perry, Curtis Rueden, Johannes Schindelin,
 Jean-Yves Tinevez and Michael Zinsmaier.</license.copyrightOwners>
 
 		<!-- NB: Deploy releases to the SciJava Maven repository. -->
-		<releaseProfiles>deploy-to-scijava</releaseProfiles>
+		<releaseProfiles>sign,deploy-to-scijava</releaseProfiles>
 
 		<imglib2.version>5.8.0</imglib2.version>
 	</properties>
