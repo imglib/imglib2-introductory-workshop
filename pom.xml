@@ -58,7 +58,7 @@
 
 
 	<scm>
-		<connection>scm:git:git://github.com/imglib/imglib2-introductory-workshop</connection>
+		<connection>scm:git:https://github.com/imglib/imglib2-introductory-workshop</connection>
 		<developerConnection>scm:git:git@github.com:imglib/imglib2-introductory-workshop</developerConnection>
 		<tag>HEAD</tag>
 		<url>https://github.com/imglib/imglib2-introductory-workshop</url>
