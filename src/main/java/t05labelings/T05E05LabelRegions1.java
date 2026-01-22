@@ -93,7 +93,7 @@ public class T05E05LabelRegions1
 		 * Allows to iterate all pixels in a region.
 		 * Cursor< Void > means: Only the position counts.
 		 */
-		final Cursor< Void > cursor = region.cursor();
+		final Cursor< Void > cursor = region.inside().cursor();
 		final RandomAccess< UnsignedByteType > access = l30.randomAccess();
 		while ( cursor.hasNext() )
 		{
